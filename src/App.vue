@@ -1,6 +1,8 @@
 <template>
   <div id="app">
     <logoMenu></logoMenu>
+
+    <router-view></router-view>
   </div>
 </template>
 
@@ -11,12 +13,12 @@ export default {
   name: "App",
 
   components: {
-    logoMenu
+    logoMenu,
   },
 
   data: () => ({
     //
-  })
+  }),
 };
 </script>
 <style>
