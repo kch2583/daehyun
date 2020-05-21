@@ -1,31 +1,22 @@
 <template>
-  <div id="app">
-    <logoMenu></logoMenu>
+  <v-app>
+    <v-container>
+      <LogoMenu></LogoMenu>
 
-    <router-view></router-view>
-    <mainFooter></mainFooter>
-  </div>
+      <router-view></router-view>
+    </v-container>
+  </v-app>
 </template>
 
 <script>
-import logoMenu from "./components/pageDetails/logoMenu";
-import mainFooter from "./components/pageDetails/mainFooter";
-
+import LogoMenu from "../src/components/pageDetails/logoMenu";
 export default {
   name: "App",
 
-  components: {
-    logoMenu,
-    mainFooter
-  },
+  components: { LogoMenu },
 
   data: () => ({
     //
   })
 };
 </script>
-<style>
-#app {
-  text-align: center;
-}
-</style>

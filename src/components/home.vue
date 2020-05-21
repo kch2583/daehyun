@@ -1,13 +1,16 @@
 <template>
-  <div id="home">
-    <div id="homeMainImg">
-      <img id="diaryImg" src="../assets/diary.png" alt="daehyun main image" width="80%" />
+  <v-container id="home">
+    <v-row class="justify-center" id="homeMainImg">
+      <v-img id="diaryImg" src="../assets/diary.png" alt="daehyun main image" width="300px" />
       <br />
       <router-link to="/product">제품 보러 가기 -></router-link>
-    </div>
-
-    <div class="homeDetails" v-for="(id, index) in homeDetails" :key="index">{{ id.title }}</div>
-  </div>
+    </v-row>
+    <v-row class="text-center">
+      <v-col v-for="(id, index) in homeDetails" :key="index">
+        <div class="homeDetails">{{ id.title }}</div>
+      </v-col>
+    </v-row>
+  </v-container>
 </template>
 
 <script>
@@ -25,12 +28,7 @@ export default {
 </script>
 
 <style scoped>
-#diaryImg {
-  display: inline-block;
-}
 .homeDetails {
-  display: inline-block;
-
-  width: 33.3%;
+  display: inline;
 }
 </style>
