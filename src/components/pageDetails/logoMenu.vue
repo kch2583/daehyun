@@ -1,12 +1,12 @@
 <template>
   <v-container>
     <v-row class="justify-center">
-      <img src="@/assets/daehyunLogo.png" alt="daehyun Logo" width="20%" />
-    </v-row>
-    <v-row>
-      <v-tabs centered>
-        <v-tab v-for="menuList in menuLists" :key="menuList.id">
-          <router-link :to="menuList.path">{{ menuList.pageName }}</router-link>
+      <img src="@/assets/daehyunLogo.png" alt="daehyun Logo" width="25%" />
+
+      <v-tabs centered fixed-tabs background-color="transparent" hide-slider>
+        <v-tab v-for="menuList in menuLists" :key="menuList.id" :to="menuList.path">
+          <!-- <router-link :to="menuList.path">{{ menuList.pageName }}</router-link> -->
+          {{ menuList.pageName }}
         </v-tab>
       </v-tabs>
     </v-row>
@@ -27,5 +27,5 @@ export default {
 };
 </script>
 
-<style lang="css" scoped>
+<style lang="scss" scoped>
 </style>
